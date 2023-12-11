@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import 'dotenv/config';
-import 'db/config.js';
+import 'db/config.ts';
 const app = express();
 
 app.use(cors({ credentials: true }));
