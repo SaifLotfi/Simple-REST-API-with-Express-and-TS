@@ -9,3 +9,5 @@ const globalErrorHandler = (
     const message = err.message || 'Something went wrong';
     res.status(statusCode).json({ message });
 };
+
+export default globalErrorHandler;

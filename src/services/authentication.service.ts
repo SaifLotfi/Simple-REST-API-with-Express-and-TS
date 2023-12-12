@@ -1,6 +1,6 @@
-import { User, createUser, getUserByEmail } from 'models/user';
-import { authentication, random } from 'helpers';
-
+import { createUser, getUserByEmail } from '../models/user';
+import { authentication, random } from '../helpers';
+import 'express-async-errors';
 const registerUser = async (name: string, email: string, password: string) => {
 
     if (!name || !email || !password) {
