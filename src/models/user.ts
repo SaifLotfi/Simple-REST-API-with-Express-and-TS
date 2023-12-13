@@ -23,4 +23,4 @@ export const createUser = (values: Record<string, any>) =>
     new User(values).save().then((user) => user.toObject());
 export const deleteUserById = (id: string) => User.findByIdAndDelete(id);
 export const updateUserById = (id: string, values: Record<string, any>) =>
-    User.findByIdAndUpdate(id, values);
+    User.findByIdAndUpdate(id, values,{new:true});
