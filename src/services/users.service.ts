@@ -12,10 +12,9 @@ const deleteUserService = async(id:string)=>{
 type userData = {
     name?:string,
     email?:string,
-    authentication?:{password:string,}
 }
 const updateUserService = async(userId:string,userData:userData)=>{
-    if(!userData.name && !userData.email && !userData.authentication.password){
+    if(!userData.name && !userData.email){
         const err: any = new Error('No Data Sent');
         err.status = 400;
         throw err;
